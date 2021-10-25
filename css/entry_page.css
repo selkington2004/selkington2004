@@ -1,12 +1,55 @@
-.container {
-    background-color: black;
+body {
+    font-family: 'Comfortaa', cursive;
+    color: palegreen;
+}
+
+h1 {
+    font-size: 4em;
+    margin-left: 800px;
+    text-shadow: 20px lightgoldenrodyellow;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 0px;
+    margin-left: 900px;
+    z-index: 0;
+}
+
+img {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height: auto;
+    padding: 20px;
+    transition: transform 1s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.5);
+    z-index: 1;
 }
 
 .main_img {
-    display: block;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50%;
+    animation-name: "popping";
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popping {
+    from {
+        width: 10%;
+        height: auto;
+        opacity: 80%;
+    }
+    to {
+        width: 30%;
+        height: auto;
+        opacity: 100%;
+    }
 }
